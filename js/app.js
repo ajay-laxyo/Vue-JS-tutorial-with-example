@@ -7,7 +7,7 @@ var myview = new Vue({
 		name:"YouTube", // lecture 3 start from here data binding 1st
 		ulink:"https://www.youtube.com",
 		title:"this is youtube link",
-		imageLink:"avt.png",
+		imageLink:"../img/avt.png",
 		isActive:"1", 
 		textName:"Ajay",
 		textEmail:"ajay@laxyo.org",

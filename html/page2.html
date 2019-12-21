@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue JS tutorials</title>
+
+	<script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+
+</head>
+<body>
+	<div id="my-app">
+		<h3> Counter : {{ counter }} </h3>
+		<br>
+		<button @click="increment(1)" name="button">Increment by 1</button>
+		<button v-on:click="decrement(1)" name="button">Decrement by 1</button>
+		<!-- we can also replace v-on: By @ -->
+		<br><br>
+		<button v-on:dblclick="increment(5)" name="button">Increment by 5</button>
+		<button @dblclick="decrement(5)" name="button">Decrement by 5</button>
+		<hr>
+		<!-- lecture 6 mouse events -->
+		<div @mousemove="moveFunction" style="height: 300px; width: 600px; border: 2px solid black;">
+			<span>{{ x }},{{ y }}</span>
+		</div>
+		<br>
+		<button @mouseover="overFunction">MouseOver</button>
+
+
+		<script src="../js/app2.js"></script>
+	</div>
+	
+</body>
+</html>
