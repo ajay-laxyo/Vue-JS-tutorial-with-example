@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue JS tutorials</title>
+	<script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+	<style type="text/css">
+		.fixedImageSize
+		{
+			height: 100px;
+			width: 100px;
+		}
+	</style>
+</head>
+
+
+<body>
+	<div id="our-app">
+		<h3>Name : {{ fname }} and Address is : {{ addr }} !!!!</h3>
+
+		<!-- lecture 2 methods -->
+
+		<p> {{ run('youtube', 'Ajay') }} </p>
+
+		<p> {{ welcome('Morning') }} </p> 
+
+		<p> {{ valueAccess() }} </p>
+
+	<!-- lecture 3 data binding 
+			1) => HTML attribute binding -->
+		<a v-bind:href="ulink" v-bind:title="title"> {{ name }} </a>
+		<br>
+		<!-- 2) HTML class binding -->
+		<img v-bind:src="imageLink" v-bind:class="{fixedImageSize:isActive}">
+		
+		<!-- 3) HTML form input binding
+				we can also use only ( : ) symbol place of v-bind -->
+
+		<br><br>
+		<form method="post">
+			<input type="text" :value="textName" placeholder="Name">
+			<input type="text" :value="textEmail" placeholder="Email">
+			<input type="button" name="submit" value="Submit">
+		</form>
+		<br><br>
+
+	   <div v-html="paragraph"></div>
+
+	</div>
+
+
+	<script src="app.js"></script>
+</body>
+</html>
