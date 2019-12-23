@@ -1,0 +1,60 @@
+<!-- two way data binding  -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>two way daya binding</title>
+	<script src="../js/vue.js"></script>
+</head>
+<body>
+	<div id="my-app">
+		<input type="text" v-model="char">
+		<br><br>
+		<div style="background-color: #99ffe6"> {{ char }} </div>
+		<hr>
+		<div>
+			<form>
+				<input type="text" placeholder="Full Name" v-model="name">
+				<br><br>
+				<input type="text" placeholder="Email id" v-model="email">
+			</form>
+		</div><br><br>
+		<div style="background-color: #99ffe6">
+			<span>Name :  {{ name }} </span><br>
+			<span> Email Id :  {{ email }} </span>
+		</div>
+		<br><hr>
+		<!-- lecture 11 computed properties -->
+		<div>
+			<input type="text" v-model="fname" placeholder="First name">
+			<br><br>
+			<input type="text" v-model="lname" placeholder="Last name">
+			<br><br>
+			<div>
+				<h3>Full Name is :- {{ getFullName }} </h3>
+			</div>
+		</div>
+
+		<hr>
+		<div>
+			<input type="text" v-model="cm" placeholder="Enter value in CM">
+			<br><br>
+			<div>
+				<h3>Value in feet is :- {{ convertToFeet }} </h3>
+			</div>
+		</div>
+		<hr>
+		<div>
+			<input type="text" v-model="maths" placeholder="Maths mark">
+			<br><br>
+			<input type="text" v-model="science" placeholder="Science mark">
+			<br><br>
+			<input type="text" v-model="english" placeholder="English mark">
+			<br><br>
+			<div>
+				<h3>Total Mark is :- {{ totalMarks }} </h3>
+			</div>
+		</div>
+	</div>
+	<script src="../js/app3.js"></script>
+</body>
+</html>

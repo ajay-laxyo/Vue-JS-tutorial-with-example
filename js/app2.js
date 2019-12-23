@@ -18,6 +18,18 @@ var myapp = new Vue({
  		},
  		overFunction : function(){
  			console.log("this is msg due to mouse over");
+ 		},
+ 		outFunction : function(){
+ 			console.log("this is msg due to mouse Out");
+ 		},
+ 		pressFunction : function(event){
+ 			console.log(event.key);
+ 		},
+ 		upFunction : function(){
+ 			console.log("key up function.....");
+ 		},
+ 		downFunction : function(event){
+ 			console.log(event.key);
  		}
 	}
 });

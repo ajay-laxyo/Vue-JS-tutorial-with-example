@@ -22,11 +22,19 @@
 			<span>{{ x }},{{ y }}</span>
 		</div>
 		<br>
-		<button @mouseover="overFunction">MouseOver</button>
+		<button type="button" @mouseover="overFunction" @mouseout="outFunction">Mouse Over and Out</button>
+		<br><br>
+		<!-- <button type="button" @mouseout="outFunction">MouseOut</button> -->
 
-
-		<script src="../js/app2.js"></script>
+		<!-- lecture 7 keyboard event -->
+		<input @keypress="pressFunction" placeholder="type here....">
+		<br><br>
+		<input @keyup="upFunction" placeholder="Key Up....">
+		<br><br>
+		<input @keydown="downFunction" placeholder="Key Down....">
+		
 	</div>
+	<script src="../js/app2.js"></script>
 	
 </body>
 </html>
