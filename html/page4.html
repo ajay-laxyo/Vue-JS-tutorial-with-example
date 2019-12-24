@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>conditional Directives</title>
+	<script src="../js/vue.js"></script>
+</head>
+<body>
+	<div id="my-app">
+		<p v-if="isActive">this is my if statement</p>
+		<p v-else>this is my else statement</p>
+		<hr>
+
+		<button @click="countValue">Increase count value</button>
+		<h4>Count : {{ count }} </h4>
+
+		<p v-if="count == 1 ">this is my first statement</p>
+		<p v-else-if="count == 2 ">this is my second statement</p>
+		<p v-else-if="count == 3 ">this is my third statement</p>
+		<p v-else>no statement matched</p>
+
+		<hr>
+
+		<p v-show="isActive">this is my show statement</p>
+
+		<hr>
+
+		<div>
+			<ul>
+				<li v-for="std in students"> {{ std }} </li>
+			</ul>
+			<ul>
+				<li v-for="teacher in teachers"> 
+				{{ teacher.name }} teaches {{ teacher.subject }} from {{ teacher.location.street }} {{ teacher.location.city }}
+				</li>
+			</ul>
+			<br>
+			<!-- another way ti display OOOOOOOOORRRRRRRRRRR -->
+			<ul>
+				<li v-for="teacher in teachers"> 
+				{{ teacher.name }} teaches {{ teacher.subject }} 
+				<p v-for="(addr,index) in teacher.location">
+					{{ index }} - {{ addr }}
+				</p>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<script src="../js/app4.js"> </script>
+</body>
+</html>

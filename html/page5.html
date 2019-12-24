@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multipal instances</title>
+	<script src="../js/vue.js"></script>
+</head>
+<body>
+	<div id="my-app-1">
+		<p>Title : {{ title }}</p>
+
+		<h4> {{ secondApp() }} </h4>
+	</div>
+
+
+<div style="background-color: #e0ebeb; width: 100%">/////////////////////////////////  Second Instance  ///////////////////////////////////</div>
+	
+	<div id="my-app-2">
+		<p>Title : {{ title }} </p>
+		<p>Author : {{ author }} </p>
+
+		<h4> {{ secondApp() }} </h4>
+
+		<p>This msg ("methods") comes from first instance :- <b> {{ thirdAppFn() }} </b> </p>
+
+		<p> this is "Instance" from my-app-1 :- {{ accessComputedApp1() }} </p>
+	</div>
+
+	<script src="../js/app5.js"> </script>
+
+</body>
+</html>

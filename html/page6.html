@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Components</title>
+	<script src="../js/vue.js"></script>
+</head>
+<body>
+	<div id="my-app-1">
+		<jo-bhi-dena-hai> </jo-bhi-dena-hai>
+
+		<hr>
+
+		First Name :- <input type="text" placeholder="enter first name" v-model="fname"><br>
+		Last Name :- <input type="text" placeholder="enter last name" v-model="lname"><br>
+		<h4> Full name :<input type="text" v-model="fullName"> </h4>
+		<p>Channel Name : {{ channelName }} </p>
+	</div>
+	<div style="background-color: #e0ebeb; width: 100%">/////////////////////////////////  Second Instance  ///////////////////////////////////</div>
+
+	<div id="my-app-2">
+		<jo-bhi-dena-hai> </jo-bhi-dena-hai>
+
+<!-- referencing in Vue JS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+		<hr>
+
+		Name :- <input type="text" placeholder="enter name" ref="name"><br>
+		Email :- <input type="text" placeholder="enter Email" ref="email"><br>
+
+		<p ref="para">this is my paragraph</p>
+		<button type="button" @click="btnSubmit"> click me to get data by Ref</button>
+	</div>
+
+	<script src="../js/app6.js"> </script>
+</body>
+</html>

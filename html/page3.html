@@ -4,11 +4,25 @@
 <head>
 	<title>two way daya binding</title>
 	<script src="../js/vue.js"></script>
+	<style>
+		button.redClass
+		{
+			background: red;
+			border: 2px solid blue;
+			color: white;
+		}
+		button
+		{
+			background: blue;
+			border: 2px solid red;
+			color: white;
+		}
+	</style>
 </head>
 <body>
 	<div id="my-app">
 		<input type="text" v-model="char">
-		<br><br>
+		<br>
 		<div style="background-color: #99ffe6"> {{ char }} </div>
 		<hr>
 		<div>
@@ -17,18 +31,17 @@
 				<br><br>
 				<input type="text" placeholder="Email id" v-model="email">
 			</form>
-		</div><br><br>
-		<div style="background-color: #99ffe6">
+		</div><br>
+		<div>
 			<span>Name :  {{ name }} </span><br>
 			<span> Email Id :  {{ email }} </span>
 		</div>
-		<br><hr>
+		<hr>
 		<!-- lecture 11 computed properties -->
 		<div>
 			<input type="text" v-model="fname" placeholder="First name">
 			<br><br>
 			<input type="text" v-model="lname" placeholder="Last name">
-			<br><br>
 			<div>
 				<h3>Full Name is :- {{ getFullName }} </h3>
 			</div>
@@ -37,7 +50,6 @@
 		<hr>
 		<div>
 			<input type="text" v-model="cm" placeholder="Enter value in CM">
-			<br><br>
 			<div>
 				<h3>Value in feet is :- {{ convertToFeet }} </h3>
 			</div>
@@ -49,10 +61,14 @@
 			<input type="text" v-model="science" placeholder="Science mark">
 			<br><br>
 			<input type="text" v-model="english" placeholder="English mark">
-			<br><br>
 			<div>
 				<h3>Total Mark is :- {{ totalMarks }} </h3>
 			</div>
+		</div>
+		<div>
+			<button type="button" v-bind:class="{redClass:isActive}" @click="toggleClass">Toggle</button>
+			<!-- and on anothe methods -->
+			<button type="button" v-bind:class="{redClass:isActive}" @click="isActive = !isActive">Toggle by other method</button>
 		</div>
 	</div>
 	<script src="../js/app3.js"></script>
