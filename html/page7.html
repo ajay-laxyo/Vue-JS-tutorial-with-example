@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Custom directives</title>
+		<script src="../js/vue.js"></script>
+	</head>
+
+	<body>
+
+		<div id="my-app-1"> <!-- channel is a agrument -->
+			<button title="no update" v-my_directive:channel="message">Click Me</button>
+		</div>
+<hr>
+		<div id="my-app-2">
+			<button v-my_owt:blue.change="channelName">Area #1</button>
+			<button v-my_owt:red="channelName">Area #2</button>
+		</div>
+
+		<script src="../js/app7.js"> </script>
+	</body>
+</html>
